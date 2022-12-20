@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cuoiky
+{
+     class QLchuong
+    {
+        class QLChuong : Chuong
+        {
+            List<Chuong> ch = new List<Chuong>();
+            public void Hienthich()
+            {
+                foreach (Chuong a in ch)
+                {
+                    Console.WriteLine("ID Chuong: {0}", IDchuong);
+                    Console.WriteLine("Ten Chuong: {0}", Tenchuong);
+                   
+                }
+            }
+            public void Nhapchuong()
+            {
+                string trl;
+                Chuong Ch;
+                while (true)
+                {
+                    Ch = new Chuong();
+                    Ch.nhap();
+                    ch.Add(NV);
+                    Console.Write("Ban muon nhap tiep thi nhan (c): ");
+                    trl = Console.ReadLine();
+                    if (trl != "c") break;
+                }
+            }
+            public void Sapxep()
+            {
+                ch.Sort(new Sapxepchuong());
+            }
+
+        }
+    }
